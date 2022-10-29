@@ -5,11 +5,15 @@ const NavPage = () => (
     <ul className="nav__container">
       <img src={logo} alt="logo" className="nav__logo" />
       <div className="nav__links">
+        <div className="nav__dropdown">
+          <select className="nav__dropdown-menu">
+            <option>Book</option>
+            <option>Flights</option>
+            <option>Hotels</option>
+            <option>Restaurants</option>
+          </select>
+        </div>
         <li className="nav__item">Translation</li>
-        <li className="nav__item">Flights</li>
-        <li className="nav__item">Hotels</li>
-        <li className="nav__item">Restaurants</li>
-        <li className="nav__item">Activities</li>
         <li className="nav__item">Chat Log</li>
       </div>
     </ul>

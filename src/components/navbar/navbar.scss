@@ -25,10 +25,11 @@
   &__item {
     margin: 0 1rem;
     color: $primary-four;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     cursor: pointer;
     font-weight: bold;
-    letter-spacing: 1px;
+    width: 10rem;
+    text-align: center;
   }
   &__logo {
     width: 20rem;
@@ -37,10 +38,56 @@
   &__item:hover {
     color: white;
   }
+
+  &__dropdown-menu {
+    border: 0;
+    appearance: none;
+    color: $primary-four;
+    background-color: $primary-two;
+    margin: 0 1rem;
+    color: $primary-four;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+  }
+  &__dropdown-menu:hover {
+    color: white;
+    border: 0;
+  }
+  &__dropdown {
+    width: 10rem;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+  }
+  &__dropdown:after {
+    padding: 12px 8px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    border: 0;
+  }
 }
 
 @include tablet {
   .landing__container-mobile {
     display: none;
   }
+}
+
+select option {
+  font-size: 18px;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
