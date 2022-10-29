@@ -9,6 +9,10 @@
   width: 100vw;
   height: 8vh;
   background-color: $primary-two;
+  display: none;
+  @include tablet {
+    display: flex;
+  }
   &__container {
     display: flex;
     align-items: center;

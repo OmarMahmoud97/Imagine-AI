@@ -38,7 +38,7 @@
     }
     @include desktop {
       margin-bottom: 0;
-      width: 400px;
+      width: 30%;
     }
   }
 
@@ -70,5 +70,9 @@
   }
   &__iframe {
     border-color: transparent;
+    height: 12rem;
+    @include tablet {
+      height: 15rem;
+    }
   }
 }
