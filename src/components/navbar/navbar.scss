@@ -1,0 +1,46 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+
+.nav {
+  @include flex-center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100vw;
+  height: 8vh;
+  background-color: $primary-two;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablet {
+      justify-content: space-between;
+      width: 80%;
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__item {
+    margin: 0 1rem;
+    color: $primary-four;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  &__logo {
+    width: 20rem;
+    cursor: pointer;
+  }
+  &__item:hover {
+    color: white;
+  }
+}
+
+@include tablet {
+  .landing__container-mobile {
+    display: none;
+  }
+}
