@@ -1,7 +1,7 @@
 import "./WhatWeDo.scss";
-import plane from "../../assets/images/airplane.gif";
-import food from "../../assets/images/cutlery.gif";
-import speech from "../../assets/images/speech-bubble.gif";
+import plane from "../../../assets/images/airplane.gif";
+import food from "../../../assets/images/cutlery.gif";
+import speech from "../../../assets/images/speech-bubble.gif";
 
 const WhatweDo = () => (
   <section className="WhatWeDo">
@@ -27,7 +27,7 @@ const WhatweDo = () => (
         <div className="WhatWeDo__innerWrapper">
           <iframe
             className="WhatWeDo__iframe"
-            src="https://embed.lottiefiles.com/animation/112253"
+            src="https://embed.lottiefiles.com/animation/2523"
           ></iframe>
           <h3 className="WhatWeDo__header">Flights & Hotels</h3>
           <div className="WhatWeDo__wrapper">

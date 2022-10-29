@@ -1,6 +1,6 @@
-@use "../../styles/partials/breakpoints" as *;
-@use "../../styles/partials/mixin" as *;
-@use "../../styles/partials/variables" as *;
+@use "../../../styles/partials/breakpoints" as *;
+@use "../../../styles/partials/mixin" as *;
+@use "../../../styles/partials/variables" as *;
 
 .WhatWeDo {
   width: 100vw;
@@ -10,35 +10,50 @@
   justify-content: center;
   flex-direction: column;
   background-color: #d9e4b1;
+  flex-wrap: wrap;
+
   &__container {
     width: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include desktop {
+      justify-content: space-between;
+    }
   }
   &__one,
   &__two,
   &__three {
-    width: 30%;
+    width: 300px;
     background-color: $primary-one;
     height: 55vh;
     border-radius: 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2rem;
+    @include tablet {
+      width: 500px;
+    }
+    @include desktop {
+      margin-bottom: 0;
+      width: 400px;
+    }
   }
 
   &__innerWrapper {
     border-radius: 10rem;
     width: 90%;
     height: 90%;
-    padding: 3rem;
+    padding: 1rem;
     border: solid 2px $primary-four;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
   &__wrapper {
+    flex-wrap: wrap;
     border-radius: 10rem;
   }
   &__text {
@@ -46,6 +61,7 @@
   }
   &__header {
     margin-bottom: 1rem;
+    color: $primary-three;
   }
   &__title {
     margin-bottom: 5rem;

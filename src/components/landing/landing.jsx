@@ -1,5 +1,8 @@
-import "./landing.scss";
+import WhatweDo from "./whatWeDo/WhatWeDo";
+
 import videoBg from "../../assets/videos/ezgif.com-gif-maker.mp4";
+
+import "./landing.scss";
 
 const Landing = () => (
   <section className="landing">
@@ -13,6 +16,7 @@ const Landing = () => (
         Call it a plan
       </p>
     </div>
+    <WhatweDo />
   </section>
 );
 export default Landing;
