@@ -5,11 +5,11 @@ import { UserAuth } from "../../context/AuthContext";
 import { async } from "@firebase/util";
 
 const NavPage = () => {
-  const { user, logout } = UserAuth();
+  const { user, Logout } = UserAuth();
 
   const handleSignOut = async () => {
     try {
-      await logout();
+      await Logout();
     } catch (error) {
       console.log(error);
     }
@@ -35,9 +35,11 @@ const NavPage = () => {
           </Link>
           <li className="nav__item">Chat Log</li>
           <li className="nav__item">Blog</li>
-          <Link to="/SignIn">
+          <Link className="nav__account-btn" to="/SignIn">
             {user?.displayName ? (
-              <button onClick={handleSignOut}>Logout</button>
+              <button className="nav__login" onClick={handleSignOut}>
+                Logout
+              </button>
             ) : (
               <button className="nav__login">Login</button>
             )}
