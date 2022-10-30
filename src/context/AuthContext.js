@@ -5,6 +5,8 @@ import {
   signInWithRedirect,
   signOut,
   onAuthStateChanged,
+  FacebookAuthProvider,
+  GithubAuthProvider,
 } from "firebase/auth";
 import { auth } from "../firebase";
 import { useEffect, useState } from "react";
@@ -17,6 +19,18 @@ export const AuthContextProvider = ({ children }) => {
 
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
+    // signInWithPopup(auth, provider);
+    signInWithRedirect(auth, provider);
+  };
+
+  const facebookSignIn = () => {
+    const provider = new FacebookAuthProvider();
+    // signInWithPopup(auth, provider);
+    signInWithRedirect(auth, provider);
+  };
+
+  const githubSignIn = () => {
+    const provider = new GithubAuthProvider();
     // signInWithPopup(auth, provider);
     signInWithRedirect(auth, provider);
   };

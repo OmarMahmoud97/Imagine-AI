@@ -9,8 +9,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #d9e4b1;
+  background-color: ""; //choose color;
   flex-wrap: wrap;
+  @include tablet {
+    border-radius: 20rem 20rem 0 0;
+  }
 
   &__container {
     width: 80%;
