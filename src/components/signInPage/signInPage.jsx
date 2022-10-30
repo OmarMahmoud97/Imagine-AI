@@ -7,8 +7,28 @@ import { useEffect } from "react";
 import { StyledFirebaseAuth } from "react-firebaseui";
 
 const SignInPage = ({ setIsAuth }) => {
-  const { googleSignIn, user } = UserAuth();
+  const { facebookSignIn, githubSignIn, googleSignIn, user } = UserAuth();
   const navigate = useNavigate();
+
+  const handleFacebookSignIn = async () => {
+    try {
+      await facebookSignIn();
+      localStorage.setItem("isAuth", true);
+      setIsAuth(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleGithubSignIn = async () => {
+    try {
+      await githubSignIn();
+      localStorage.setItem("isAuth", true);
+      setIsAuth(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleGoogleSignIn = async () => {
     try {
@@ -30,7 +50,9 @@ const SignInPage = ({ setIsAuth }) => {
     <section className="signInPage">
       <div className="signInPage__container">
         <h1>Choose sign in option.</h1>
+        <GoogleButton onClick={handleFacebookSignIn} />
         <GoogleButton onClick={handleGoogleSignIn} />
+        <GoogleButton onClick={handleGithubSignIn} />
       </div>
     </section>
   );
