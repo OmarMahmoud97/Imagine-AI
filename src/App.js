@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Landing from "./components/landing/landing";
-import SignInPage from "./components/login/signInPage/signInPage";
 import NavPage from "./components/navbar/navbar";
+import SignInPage from "./components/signInPage/signInPage";
 import Translate from "./components/translation/translate";
 import User from "./components/user/user";
 import { AuthContextProvider } from "./context/AuthContext";
