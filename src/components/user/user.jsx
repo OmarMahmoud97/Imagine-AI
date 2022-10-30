@@ -14,8 +14,6 @@ const User = () => {
   return (
     <div className="user">
       <h1>welcome! {user?.displayName}</h1>
-      <h2></h2>
-      <button onClick={handleSignOut()}>Sign out</button>
     </div>
   );
 };
