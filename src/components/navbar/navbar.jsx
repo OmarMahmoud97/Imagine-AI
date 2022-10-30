@@ -36,7 +36,9 @@ const NavPage = () => {
           <Link to="/translate" className="results__btn-right">
             <li className="nav__item">Translation</li>
           </Link>
-          <li className="nav__item">Blog</li>
+          <Link to="/blog" className="nav__item">
+            Blog
+          </Link>
           <Link className="nav__account-btn" to="/SignIn">
             {user?.displayName ? (
               <button className="nav__login" onClick={handleSignOut}>

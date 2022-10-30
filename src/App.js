@@ -1,15 +1,18 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AuthContextProvider } from "./context/AuthContext";
+import { useState } from "react";
+
 import Landing from "./components/landing/landing";
 import NavPage from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import SignInPage from "./components/signInPage/signInPage";
 import Translate from "./components/translation/translate";
-import User from "./components/user/user";
-import { AuthContextProvider } from "./context/AuthContext";
-import "./styles/partials/_resets.scss";
-import Protection from "./userProtection";
-import { useState } from "react";
 import CreateBlog from "./components/blog/createBlog/createBlog";
+import User from "./components/user/user";
+import Protection from "./userProtection";
+import Blog from "./components/blog/blogPage/blogPage";
+
+import "./styles/partials/_resets.scss";
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
@@ -21,6 +24,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/translate" element={<Translate />} />
+            <Route path="/blog" element={<Blog />} />
+
             <Route
               path="/SignIn"
               element={<SignInPage setIsAuth={setIsAuth} />}
