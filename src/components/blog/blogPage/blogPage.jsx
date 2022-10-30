@@ -3,11 +3,11 @@ import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../../../firebase";
 
 function Blog({ isAuth }) {
-  const [postLists, setPostList] = useState([]);
-  const postsCollectionRef = collection(db, "posts");
+  const [postLists, setPostList] = useState();
+  const postsCollectionRef = collection(db, "blogPosts");
 
   const deletePost = async (id) => {
-    const postDoc = doc(db, "posts", id);
+    const postDoc = doc(db, "blogPosts", id);
     await deleteDoc(postDoc);
   };
   useEffect(() => {
@@ -17,11 +17,16 @@ function Blog({ isAuth }) {
     };
 
     getPosts();
-  }, [deletePost]);
+  }, []);
+
+  if (!postLists) {
+    return <p>Loading...</p>;
+  }
+  console.log(postLists);
 
   return (
     <div className="homePage">
-      <h1>Blogs</h1>
+      <h1>Blogs123</h1>
       {postLists.map((post) => {
         return (
           <div className="post">

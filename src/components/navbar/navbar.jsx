@@ -27,10 +27,16 @@ const NavPage = () => {
           </Link>
           <li className="nav__dropdown nav__dropdown-first">
             Book
-            <ul class="dropdown">
-              <li className="nav__dropdown">Flights</li>
-              <li className="nav__dropdown">Hotels</li>
-              <li className="nav__dropdown">Restaurants</li>
+            <ul className="nav__dropdown-container">
+              <Link to="/flights" className="nav__dropdown">
+                Flights
+              </Link>
+              <Link to="/hotels" className="nav__dropdown">
+                Hotels
+              </Link>
+              <Link to="/restaurants" className="nav__dropdown">
+                Restaurants
+              </Link>
             </ul>
           </li>
           <Link to="/translate" className="results__btn-right">
@@ -46,6 +52,14 @@ const NavPage = () => {
               </button>
             ) : (
               <button className="nav__login">Login</button>
+            )}
+          </Link>
+
+          <Link className="nav__account-btn" to="/create-post">
+            {user?.displayName ? (
+              <button className="nav__login">Create post</button>
+            ) : (
+              ""
             )}
           </Link>
         </div>

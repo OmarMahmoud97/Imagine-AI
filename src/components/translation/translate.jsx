@@ -5,6 +5,7 @@ import "./translate.scss";
 
 const Translate = () => (
   <section className="translate">
+    <h1>Translate</h1>
     {/* <Iframe src={translate}></Iframe> */}
     {/* <iframe */}
     {/* src="./translate.html" */}
