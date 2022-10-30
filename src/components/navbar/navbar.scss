@@ -75,13 +75,18 @@
     color: $primary-four;
     font-size: 1.4rem;
     font-weight: bold;
-    margin-left: 2rem;
     transition-duration: 0.3s;
+    height: 4rem;
     cursor: pointer;
   }
   &__login:hover {
     background-color: $primary-four;
     color: $primary-three;
+  }
+  &__account-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
