@@ -24,22 +24,17 @@ function Blog(user) {
   if (!postLists) {
     return <p>Loading...</p>;
   }
-  console.log(postLists);
-
   return (
     <div className="homePage">
       <h1>Blogs123</h1>
       {postLists.map((post) => {
         return (
-          <div className="post">
+          <div key={post.id} className="post">
             <div className="postHeader">
               <div className="title">
                 <h1> {post.title}</h1>
               </div>
               <div className="deletePost">
-                {console.log(post.author.id)}
-                {console.log(auth.currentUser.uid)}
-                {console.log(user)}
                 {user && post.author.id === auth.currentUser.uid && (
                   <button
                     onClick={() => {

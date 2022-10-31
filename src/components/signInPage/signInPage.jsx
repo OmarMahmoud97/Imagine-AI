@@ -1,11 +1,11 @@
 import "./signInPage.scss";
-import { Link } from "react-router-dom";
-import GoogleButton from "react-google-button";
+
 import { UserAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { StyledFirebaseAuth } from "react-firebaseui";
-
+import { FacebookLoginButton } from "react-social-login-buttons";
+import { GithubLoginButton } from "react-social-login-buttons";
+import { GoogleLoginButton } from "react-social-login-buttons";
 const SignInPage = ({ setIsAuth }) => {
   const { facebookSignIn, githubSignIn, googleSignIn, user } = UserAuth();
   const navigate = useNavigate();
@@ -50,9 +50,9 @@ const SignInPage = ({ setIsAuth }) => {
     <section className="signInPage">
       <div className="signInPage__container">
         <h1>Choose sign in option.</h1>
-        <GoogleButton onClick={handleFacebookSignIn} />
-        <GoogleButton onClick={handleGoogleSignIn} />
-        <GoogleButton onClick={handleGithubSignIn} />
+        <FacebookLoginButton onClick={handleFacebookSignIn} />
+        <GoogleLoginButton onClick={handleGoogleSignIn} />
+        <GithubLoginButton onClick={handleGithubSignIn} />
       </div>
     </section>
   );

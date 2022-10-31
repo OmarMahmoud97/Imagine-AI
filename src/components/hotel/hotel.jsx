@@ -1,8 +1,12 @@
 import React from "react";
-("./hotel.scss");
+import "./hotel.scss";
 
 function Hotel() {
-  return <div>Hotel</div>;
+  return (
+    <div>
+      <h1>Hotels</h1>
+    </div>
+  );
 }
 
 export default Hotel;

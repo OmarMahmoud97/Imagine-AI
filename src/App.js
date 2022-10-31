@@ -2,17 +2,20 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
 import { useState } from "react";
 
+import Restaurant from "./context/restaurant/restaurant";
+import "./styles/partials/_resets.scss";
+
+import CreateBlog from "./components/blog/createBlog/createBlog";
+import SignInPage from "./components/signInPage/signInPage";
+import Translate from "./components/translation/translate";
+import Flight from "./components/flight-search/flight";
+import Blog from "./components/blog/blogPage/blogPage";
 import Landing from "./components/landing/landing";
 import NavPage from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
-import SignInPage from "./components/signInPage/signInPage";
-import Translate from "./components/translation/translate";
-import CreateBlog from "./components/blog/createBlog/createBlog";
-import User from "./components/user/user";
+import Hotel from "./components/hotel/hotel";
 import Protection from "./userProtection";
-import Blog from "./components/blog/blogPage/blogPage";
-
-import "./styles/partials/_resets.scss";
+import User from "./components/user/user";
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
@@ -40,11 +43,11 @@ function App() {
             />
             <Route path="/create-post" element={<CreateBlog />} />
 
-            {/* <Route path="/flight" element={<Flight />} />
-          <Route path="/hotel" element={<Hotel />} />
-          <Route path="/restaurant" element={<Restaurant />} /> */}
+            <Route path="/flights" element={<Flight />} />
+            <Route path="/hotels" element={<Hotel />} />
+            <Route path="/restaurants" element={<Footer />} />
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </AuthContextProvider>
       </div>
     </BrowserRouter>

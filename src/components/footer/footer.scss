@@ -3,8 +3,25 @@
 @use "../../styles/partials/variables" as *;
 
 .footer {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  background-color: $primary-two;
+  border-radius: 18rem 18rem 0 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   &__container {
-    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/footerimg.jpg");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    width: 80%;
   }
   &__video {
     position: absolute;
