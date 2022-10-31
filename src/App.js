@@ -2,20 +2,21 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
 import { useState } from "react";
 
-import Restaurant from "./context/restaurant/restaurant";
+import Restaurant from "./components/book/restaurant/restaurant";
 import "./styles/partials/_resets.scss";
 
 import CreateBlog from "./components/blog/createBlog/createBlog";
 import SignInPage from "./components/signInPage/signInPage";
 import Translate from "./components/translation/translate";
-import Flight from "./components/flight-search/flight";
+import Flight from "./components/book/flight-search/flight";
 import Blog from "./components/blog/blogPage/blogPage";
 import Landing from "./components/landing/landing";
 import NavPage from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
-import Hotel from "./components/hotel/hotel";
+import Hotel from "./components/book/hotel/hotel";
 import Protection from "./userProtection";
 import User from "./components/user/user";
+import Activities from "./components/book/activities/activities";
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
@@ -45,9 +46,10 @@ function App() {
 
             <Route path="/flights" element={<Flight />} />
             <Route path="/hotels" element={<Hotel />} />
-            <Route path="/restaurants" element={<Footer />} />
+            <Route path="/restaurants" element={<Restaurant />} />
+            <Route path="/activities" element={<Activities />} />
           </Routes>
-          {/* <Footer /> */}
+          <Footer />
         </AuthContextProvider>
       </div>
     </BrowserRouter>

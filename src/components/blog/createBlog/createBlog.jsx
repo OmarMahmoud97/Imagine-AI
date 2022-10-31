@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../../../firebase";
 import { useNavigate } from "react-router-dom";
-
+import "./createBlog.scss";
 function CreatePost({ isAuth }) {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
@@ -26,10 +26,10 @@ function CreatePost({ isAuth }) {
   // }, []);
 
   return (
-    <div className="blog">
+    <div className="blog-page">
       <div className="blog__container">
         <h1>Create A Post</h1>
-        <div className="blog__inputGp">
+        <div className="blog__input">
           <label> Title:</label>
           <input
             placeholder="Title..."
@@ -38,7 +38,7 @@ function CreatePost({ isAuth }) {
             }}
           />
         </div>
-        <div className="blog__inputGp">
+        <div className="blog__input">
           <label> Post:</label>
           <textarea
             placeholder="Post..."

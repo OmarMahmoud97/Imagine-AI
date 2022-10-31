@@ -49,7 +49,7 @@ const SignInPage = ({ setIsAuth }) => {
   return (
     <section className="signInPage">
       <div className="signInPage__container">
-        <h1>Choose sign in option.</h1>
+        <h1 className="signInPage__header">Choose sign in option.</h1>
         <FacebookLoginButton onClick={handleFacebookSignIn} />
         <GoogleLoginButton onClick={handleGoogleSignIn} />
         <GithubLoginButton onClick={handleGithubSignIn} />

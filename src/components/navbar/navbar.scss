@@ -7,7 +7,7 @@
   justify-content: center;
   margin: 0 auto;
   width: 100vw;
-  height: 8vh;
+  height: 10vh;
   background-color: $primary-two;
   display: none;
   @include tablet {
@@ -27,10 +27,10 @@
     display: flex;
     justify-content: flex-end;
     @include tablet {
-      width: 500px;
+      width: 5 00px;
     }
     @include desktop {
-      width: 600px;
+      width: 700px;
     }
   }
   &__item {
@@ -47,8 +47,12 @@
     justify-content: center;
   }
   &__logo {
-    width: 17rem;
+    display: none;
+    width: 16rem;
     cursor: pointer;
+    @include desktop {
+      display: block;
+    }
   }
   &__item:hover {
     color: white;
@@ -95,6 +99,27 @@
     align-items: center;
     justify-content: center;
   }
+  &__create {
+    background-color: $primary-one;
+    border-color: transparent;
+    width: 10rem;
+    border-radius: 1rem;
+    color: $primary-three;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition-duration: 0.3s;
+    height: 4rem;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+
+  &__create:hover {
+    background-color: $primary-four;
+    color: $primary-three;
+  }
+  &__dropdown-container {
+    margin-top: 16vh;
+  }
 }
 
 li {
@@ -113,7 +138,7 @@ li .nav__dropdown {
 
 li:hover {
   color: white;
-  background: $primary-four;
+  // background: $primary-four;
   cursor: pointer;
 }
 
@@ -134,10 +159,10 @@ ul li ul:hover {
   display: block;
 }
 
-ul li ul li {
-  clear: both;
-  width: 100%;
-}
+// ul li ul li {
+//   clear: both;
+//   width: 100%;
+// }
 .nav__dropdown {
   background-color: $primary-two;
 }

@@ -1,0 +1,29 @@
+.blog {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &__post {
+    width: 350px;
+    height: 350px;
+    border: 1px solid #ccc;
+    overflow: auto;
+    margin: 0 1rem;
+    border: 5px solid black;
+    border-radius: 1rem;
+  }
+  &__title {
+    font-size: 1rem;
+  }
+  &__name {
+    font-size: 1.2rem;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
