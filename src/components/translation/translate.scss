@@ -4,4 +4,13 @@
 
 .translate {
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__image {
+    width: 50%;
+    margin-top: 2rem;
+    height: 90%;
+  }
 }

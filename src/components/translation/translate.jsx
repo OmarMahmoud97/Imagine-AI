@@ -67,7 +67,9 @@ function Translate() {
         <button type="submit">Submit</button>
       </form>
       {/* Shorthand if statement "if the image state is truthy, show the <img> tag" */}
-      {image && <img src={image.output_url} alt="AI Art" />}
+      {image && (
+        <img className="translate__image" src={image.output_url} alt="AI Art" />
+      )}
     </div>
   );
 }
