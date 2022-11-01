@@ -56,7 +56,7 @@ function Translate() {
 
   return (
     <div className="translate">
-      <form onSubmit={(e) => submitHandler(e)}>
+      <form className="translate__form" onSubmit={(e) => submitHandler(e)}>
         <label htmlFor="prompt">Prompt</label>
         <input
           type="text"
@@ -67,9 +67,15 @@ function Translate() {
         <button type="submit">Submit</button>
       </form>
       {/* Shorthand if statement "if the image state is truthy, show the <img> tag" */}
-      {image && (
-        <img className="translate__image" src={image.output_url} alt="AI Art" />
-      )}
+      <div className="translate__image-container">
+        {image && (
+          <img
+            className="translate__image"
+            src={image.output_url}
+            alt="AI Art"
+          />
+        )}
+      </div>
     </div>
   );
 }
