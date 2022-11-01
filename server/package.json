@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@google-cloud/media-translation": "^3.0.4",
-    "node-record-lpcm16": "^1.0.1"
+    "cors": "^2.8.5",
+    "deepai": "^1.0.21",
+    "express": "^4.18.2"
   }
 }

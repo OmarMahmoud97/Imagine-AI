@@ -1,7 +1,4 @@
 import "./WhatWeDo.scss";
-import plane from "../../../assets/images/airplane.gif";
-import food from "../../../assets/images/cutlery.gif";
-import speech from "../../../assets/images/speech-bubble.gif";
 
 const WhatweDo = () => (
   <section className="WhatWeDo">
@@ -46,6 +43,23 @@ const WhatweDo = () => (
             src="https://embed.lottiefiles.com/animation/75783"
           ></iframe>
           <h3 className="WhatWeDo__header">Restaurants</h3>
+          <div className="WhatWeDo__wrapper">
+            <div className="WhatWeDo__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur quam laborum eveniet culpa rerum harum ratione
+              architecto dolorem earum porro doloribus ducimus. delectus id
+              aperiam vitae.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="WhatWeDo__four">
+        <div className="WhatWeDo__innerWrapper">
+          <iframe
+            className="WhatWeDo__iframe"
+            src="https://embed.lottiefiles.com/animation/107595"
+          ></iframe>{" "}
+          <h3 className="WhatWeDo__header">Activities</h3>
           <div className="WhatWeDo__wrapper">
             <div className="WhatWeDo__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
