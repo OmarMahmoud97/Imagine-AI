@@ -2,7 +2,7 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
 
@@ -32,5 +32,9 @@
 
   &__text {
     color: white;
+  }
+  &__header {
+    color: white;
+    margin-bottom: 2rem;
   }
 }

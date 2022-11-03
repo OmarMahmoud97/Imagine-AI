@@ -11,10 +11,10 @@ const Landing = () => (
       <video className="landing__video" src={videoBg} autoPlay loop muted />
       <div className="landing__content">
         <h1 className="landing__text  animate__animated animate__bounceInUp">
-          Don't call it a dream
+          Don't call it a <span className="landing__dream">dream</span>
         </h1>
         <p className="landing__text  animate__animated animate__bounceInUp">
-          Call it a plan
+          Call it <span className="landing__reality">Reality</span>
         </p>
       </div>
     </section>

@@ -25,15 +25,15 @@ const NavPage = () => {
           <Link to="/">
             <li className="nav__item">Home</li>
           </Link>
+
           <Link to="/image">
-            <li className=" nav__item">Gallery</li>
+            {user?.displayName ? <li className="nav__item">Gallery</li> : ""}
           </Link>
+
           <Link to="/create">
-            <li className="nav__item">Create</li>
+            {user?.displayName ? <li className="nav__item">Create</li> : ""}
           </Link>
-          <Link to="/competition">
-            <li className=" nav__item">Competition</li>
-          </Link>
+
           <Link to="/blog">
             <li className="nav__item">Blog</li>
           </Link>

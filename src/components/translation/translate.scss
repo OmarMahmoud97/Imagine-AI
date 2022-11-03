@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixin" as *;
 @use "../../styles/partials/variables" as *;
 
-.translate {
+.create {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -13,8 +13,16 @@
   }
   &__input {
     width: 70%;
+    border-radius: 1rem;
+    height: 3rem;
+    background-color: $primary-one;
+    border-color: transparent;
+    margin-right: 2rem;
+    color: $primary-three;
+    font-weight: bold;
   }
   &__form {
+    // height: 100%;
     width: 80%;
     display: flex;
     align-items: center;

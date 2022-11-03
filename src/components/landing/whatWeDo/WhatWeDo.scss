@@ -11,6 +11,7 @@
   flex-direction: column;
   background-color: ""; //choose color;
   flex-wrap: wrap;
+  margin-bottom: 5rem;
   @include tablet {
     border-radius: 20rem 20rem 0 0;
   }
@@ -27,11 +28,10 @@
   }
   &__one,
   &__two,
-  &__three,
-  &__four {
+  &__three {
     width: 300px;
     background-color: white;
-    height: 70vh;
+    height: 75vh;
     border-radius: 10rem;
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
     }
     @include desktop {
       margin-bottom: 0;
-      width: 24%;
+      width: 30%;
     }
   }
 
@@ -51,7 +51,7 @@
     width: 80%;
     height: 90%;
     padding: 1rem;
-    border: solid 2px $primary-four;
+    border: solid 2px $primary-one;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -70,7 +70,7 @@
   &__title {
     margin-bottom: 5rem;
     font-size: 5rem;
-    color: $primary-four;
+    color: $primary-three;
   }
   &__img {
     border-color: transparent;

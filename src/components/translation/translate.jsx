@@ -1,9 +1,9 @@
 import axios from "axios";
-import "./translate.scss";
 import { useEffect, useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../../firebase";
 
+import "./translate.scss";
 function Translate() {
   // State to store the API result
   const [image, setImage] = useState(null);
@@ -56,25 +56,21 @@ function Translate() {
   // }
 
   return (
-    <div className="translate">
-      <form className="translate__form" onSubmit={(e) => submitHandler(e)}>
+    <div className="create">
+      <form className="create__form" onSubmit={(e) => submitHandler(e)}>
         <label htmlFor="prompt">Prompt</label>
         <input
           type="text"
           id="prompt"
           name="prompt"
-          className="translate__input"
+          className="create__input"
         />
         <button type="submit">Submit</button>
       </form>
       {/* Shorthand if statement "if the image state is truthy, show the <img> tag" */}
-      <div className="translate__image-container">
+      <div className="create__image-container">
         {image && (
-          <img
-            className="translate__image"
-            src={image.output_url}
-            alt="AI Art"
-          />
+          <img className="create__image" src={image.output_url} alt="AI Art" />
         )}
       </div>
     </div>
