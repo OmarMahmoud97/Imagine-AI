@@ -1,5 +1,5 @@
 import "./navbar.scss";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/IMAGINE.gif";
 import { Link } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
 import { async } from "@firebase/util";
@@ -25,27 +25,16 @@ const NavPage = () => {
           <Link to="/">
             <li className="nav__item">Home</li>
           </Link>
-          <li className="nav__dropdown nav__item nav__dropdown-first">
-            Book
-            <ul className="nav__dropdown-container">
-              <Link to="/flights" className="nav__dropdown">
-                Flights
-              </Link>
-              <Link to="/hotels" className="nav__dropdown">
-                Hotels
-              </Link>
-              <Link to="/restaurants" className="nav__dropdown">
-                Restaurants
-              </Link>
-              <Link to="/activities" className="nav__dropdown">
-                Activities
-              </Link>
-            </ul>
-          </li>
-          <Link to="/translate" className="results__btn-right">
-            <li className="nav__item">Translation</li>
+          <Link to="/image">
+            <li className=" nav__item">Gallery</li>
           </Link>
-          <Link to="/blog" className="nav__item">
+          <Link to="/create">
+            <li className="nav__item">Create</li>
+          </Link>
+          <Link to="/competition">
+            <li className=" nav__item">Competition</li>
+          </Link>
+          <Link to="/blog">
             <li className="nav__item">Blog</li>
           </Link>
           <Link className="nav__account-btn" to="/SignIn">
@@ -57,7 +46,6 @@ const NavPage = () => {
               <button className="nav__login">Login</button>
             )}
           </Link>
-
           <Link className="nav__account-btn" to="/create-post">
             {user?.displayName ? (
               <button className="nav__create">Create post</button>

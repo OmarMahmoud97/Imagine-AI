@@ -1,6 +1,6 @@
 import WhatweDo from "./whatWeDo/WhatWeDo";
 
-import videoBg from "../../assets/videos/ezgif.com-gif-maker.mp4";
+import videoBg from "../../assets/videos/imagine-ai.mp4";
 
 import "./landing.scss";
 

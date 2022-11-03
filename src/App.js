@@ -17,7 +17,7 @@ import Hotel from "./components/book/hotel/hotel";
 import Protection from "./userProtection";
 import User from "./components/user/user";
 import Activities from "./components/book/activities/activities";
-
+import Image from "./components/gallery/Gallery.jsx";
 function App() {
   const [isAuth, setIsAuth] = useState(false);
   return (
@@ -27,9 +27,9 @@ function App() {
           <NavPage />
           <Routes>
             <Route path="/" element={<Landing />} />
-            <Route path="/translate" element={<Translate />} />
+            <Route path="/create" element={<Translate />} />
             <Route path="/blog" element={<Blog />} />
-
+            <Route path="/image" element={<Image />} />
             <Route
               path="/SignIn"
               element={<SignInPage setIsAuth={setIsAuth} />}

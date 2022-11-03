@@ -5,11 +5,10 @@
 .landing {
   height: 85vh;
   width: 100vw;
-  background-color: #d9e4b1;
 
   &__video {
     width: 100%;
-    height: 100%;
+    height: 85vh;
     object-fit: cover;
     border-radius: 0 0 20rem 20rem;
   }
@@ -21,12 +20,12 @@
     height: 85vh;
     background: radial-gradient(
       circle,
-      rgba(217, 217, 217, 0.41) 29%,
-      rgba(217, 217, 217, 0.42) 30%
+      rgba(217, 217, 217, 0.21) 29%,
+      rgba(217, 217, 217, 0.22) 30%
     );
     border-radius: 0 0 20rem 20rem;
     @include tablet {
-      margin-top: 10vh;
+      margin-top: 13vh;
     }
   }
   &__content {

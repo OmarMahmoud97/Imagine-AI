@@ -1,0 +1,35 @@
+.images {
+  background-color: white;
+  &__post {
+    width: 350px;
+    height: 350px;
+    border: 1px solid #ccc;
+    margin: 0 1rem;
+    border: 5px solid black;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__delete {
+    margin-left: 1rem;
+  }
+  &__header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  &__name {
+    font-size: 1.2rem;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

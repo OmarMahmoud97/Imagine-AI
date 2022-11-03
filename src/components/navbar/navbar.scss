@@ -7,8 +7,8 @@
   justify-content: center;
   margin: 0 auto;
   width: 100vw;
-  height: 10vh;
-  background-color: $primary-two;
+  height: 13vh;
+  background-color: black;
   display: none;
   @include tablet {
     display: flex;
@@ -35,7 +35,7 @@
   }
   &__item {
     margin: 0 1rem;
-    color: $primary-four;
+    color: $primary-three;
     font-size: 1.4rem;
     cursor: pointer;
     font-weight: bold;
@@ -48,14 +48,15 @@
   }
   &__logo {
     display: none;
-    width: 16rem;
+    height: 13vh;
     cursor: pointer;
     @include desktop {
       display: block;
+      color: rgb(84, 182, 162);
     }
   }
   &__item:hover {
-    color: white;
+    color: $primary-one;
   }
   &__dropdown:hover {
     color: white;
@@ -83,7 +84,7 @@
     border-color: transparent;
     width: 10rem;
     border-radius: 1rem;
-    color: $primary-four;
+    color: $primary-one;
     font-size: 1.4rem;
     font-weight: bold;
     transition-duration: 0.3s;
@@ -91,7 +92,7 @@
     cursor: pointer;
   }
   &__login:hover {
-    background-color: $primary-four;
+    background-color: $primary-one;
     color: $primary-three;
   }
   &__account-btn {
@@ -114,8 +115,8 @@
   }
 
   &__create:hover {
-    background-color: $primary-four;
-    color: $primary-three;
+    background-color: $primary-three;
+    color: $primary-one;
   }
   &__dropdown-container {
     margin-top: 16vh;
@@ -163,6 +164,3 @@ ul li ul:hover {
 //   clear: both;
 //   width: 100%;
 // }
-.nav__dropdown {
-  background-color: $primary-two;
-}

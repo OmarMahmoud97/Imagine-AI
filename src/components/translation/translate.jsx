@@ -32,7 +32,7 @@ function Translate() {
         user_prompt: prompt,
       }
     );
-
+    console.log(data.output_url);
     // Save the response in state
     setImage(data);
 
@@ -45,6 +45,7 @@ function Translate() {
           id: auth.currentUser.uid,
         },
       });
+      console.log("I was added to the db");
     };
 
     saveImg();
