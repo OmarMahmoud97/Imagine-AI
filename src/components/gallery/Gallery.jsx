@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../../firebase";
 import trash from "../../assets/icons/iconmonstr-trash-can-28-240.png";
-
+import hamburger from "../../assets/icons/iconmonstr-menu-lined-240.png";
+import { Link } from "react-router-dom";
 import "./Gallery.scss";
 function Image(user) {
   const [imageLists, setImageList] = useState();
@@ -28,6 +29,11 @@ function Image(user) {
   }
   return (
     <div className="images">
+      <div className="landing__nav-btn">
+        <Link to="/nav">
+          <img className="landing__hamburger" src={hamburger} alt="" />{" "}
+        </Link>
+      </div>
       <div className="images__header">
         <h1 className="images__title">Images</h1>
       </div>

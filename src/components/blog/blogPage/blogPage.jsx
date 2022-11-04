@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../../../firebase";
 import trash from "../../../assets/icons/iconmonstr-trash-can-28-240.png";
+import { Link } from "react-router-dom";
+import hamburger from "../../../assets/icons/iconmonstr-menu-lined-240.png";
 import "./blogPage.scss";
 function Blog() {
   const [postLists, setPostList] = useState();
@@ -27,6 +29,11 @@ function Blog() {
   }
   return (
     <div className="blog">
+      <div className="landing__nav-btn">
+        <Link to="/nav">
+          <img className="landing__hamburger" src={hamburger} alt="" />{" "}
+        </Link>
+      </div>
       <div className="blog__header">
         <h1>Blogs</h1>
       </div>

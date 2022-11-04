@@ -2,7 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../../firebase";
-
+import hamburger from "../../assets/icons/iconmonstr-menu-lined-240.png";
+import { Link } from "react-router-dom";
 import VoiceToText from "../VoiceToText/VoiceToText";
 import "./translate.scss";
 import { saveAs } from "file-saver";
@@ -80,6 +81,11 @@ function Translate() {
 
   return (
     <div className="create">
+      <div className="landing__nav-btn">
+        <Link to="/nav">
+          <img className="landing__hamburger" src={hamburger} alt="" />{" "}
+        </Link>
+      </div>
       <form className="create__form" onSubmit={(e) => submitHandler(e)}>
         <VoiceToText
           onClick={onClickHandler}

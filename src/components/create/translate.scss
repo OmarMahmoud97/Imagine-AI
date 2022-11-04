@@ -14,14 +14,18 @@
     height: 90%;
   }
   &__input {
-    width: 70%;
     border-radius: 1rem;
     height: 3rem;
     background-color: $primary-one;
     border-color: transparent;
-    margin-right: 2rem;
     color: $primary-three;
     font-weight: bold;
+    width: 100%;
+    margin: 1rem 0;
+    @include tablet {
+      margin: 0 0;
+      width: 70%;
+    }
   }
   &__form {
     // height: 100%;
@@ -29,6 +33,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
   }
   &__image-container {
     display: flex;

@@ -42,7 +42,7 @@ const SignInPage = ({ setIsAuth }) => {
 
   useEffect(() => {
     if (user != null) {
-      navigate("/user");
+      navigate("/");
     }
   }, []);
 

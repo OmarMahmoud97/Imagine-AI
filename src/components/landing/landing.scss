@@ -43,8 +43,8 @@
     justify-content: center;
     align-items: center;
     color: white;
-    margin-top: 8vh;
     @include tablet {
+      margin-top: 8vh;
       height: 25%;
     }
     @include desktop {
@@ -54,13 +54,16 @@
 
   &__text {
     font-size: 6rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
     font-weight: bold;
     color: #373737;
     text-align: center;
     text-shadow: 0.3rem 0.3rem 0.8rem rgb(164, 164, 164);
     font-family: "Bebas Neue", cursive;
     letter-spacing: 0.2rem;
+    @include tablet {
+      margin-top: 4rem;
+    }
   }
 
   &__reality {
@@ -80,5 +83,19 @@
   &__text-top {
     font-size: 5rem;
     letter-spacing: 0.4rem;
+  }
+  &__nav-btn {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__hamburger {
+    width: 6rem;
+    height: 8rem;
+    margin-right: 3rem;
   }
 }

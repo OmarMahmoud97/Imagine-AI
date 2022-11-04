@@ -2,7 +2,7 @@ import React from "react";
 import "./user.scss";
 import { UserAuth } from "../../context/AuthContext";
 import { Link } from "react-router-dom";
-
+import hamburger from "../../assets/icons/iconmonstr-menu-lined-240.png";
 const User = () => {
   const { Logout, user } = UserAuth();
   const handleSignOut = async () => {
@@ -14,6 +14,9 @@ const User = () => {
   };
   return (
     <section className="user">
+      <Link to="/nav">
+        <img className="landing__hamburger" src={hamburger} alt="" />{" "}
+      </Link>
       <div className="user__container">
         <h1 className="user__header">welcome! {user?.displayName}</h1>
         <Link className="nav__account-btn" to="/SignIn">

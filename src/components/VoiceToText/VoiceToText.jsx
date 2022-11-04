@@ -19,7 +19,7 @@ export default function VoiceTotext(props) {
           <div className="voiceToText__button">
             <button
               onClick={props.onClick}
-              className="voiceToText__speak nav__create"
+              className="voiceToText__speak nav__login"
             >
               Click & Speak!
             </button>

@@ -45,10 +45,11 @@ const WhatweDo = () => (
           <h3 className="WhatWeDo__header">Share</h3>
           <div className="WhatWeDo__wrapper">
             <div className="WhatWeDo__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur quam laborum eveniet culpa rerum harum ratione
-              architecto dolorem earum porro doloribus ducimus. delectus id
-              aperiam vitae.
+              Upload your favorite creations & Share your AI experiences! <br />
+              Inspire peoples ideas by sharing your prompts and explain the
+              story behind it! <br />
+              <br /> Every Ai generated image is unique to You and the world
+              would love to see it!
             </div>
           </div>
         </div>

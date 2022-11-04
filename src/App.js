@@ -14,6 +14,7 @@ import Footer from "./components/footer/footer";
 
 import User from "./components/user/user";
 import Image from "./components/gallery/Gallery.jsx";
+import MobileNav from "./components/mobileNav/mobileNav";
 function App() {
   let SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -49,6 +50,9 @@ function App() {
             />
             <Route path="/user" element={<User />} />
             <Route path="/create-post" element={<CreateBlog />} />
+          </Routes>
+          <Routes>
+            <Route path="/nav" element={<MobileNav />}></Route>
           </Routes>
           <Footer />
         </AuthContextProvider>

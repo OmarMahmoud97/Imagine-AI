@@ -3,6 +3,8 @@ import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../../../firebase";
 import { useNavigate } from "react-router-dom";
 import "./createBlog.scss";
+import { Link } from "react-router-dom";
+import hamburger from "../../../assets/icons/iconmonstr-menu-lined-240.png";
 function CreatePost({ isAuth }) {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
@@ -27,6 +29,11 @@ function CreatePost({ isAuth }) {
 
   return (
     <div className="blog__page">
+      <div className="landing__nav-btn">
+        <Link to="/nav">
+          <img className="landing__hamburger" src={hamburger} alt="" />{" "}
+        </Link>
+      </div>
       <div className="blog__container-create">
         <h1 className="blog__create-header">Create A Post</h1>
         <input
