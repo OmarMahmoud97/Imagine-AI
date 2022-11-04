@@ -2,6 +2,9 @@
 @use "../../styles/partials/mixin" as *;
 @use "../../styles/partials/variables" as *;
 
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap");
 .landing {
   height: 85vh;
   width: 100vw;
@@ -50,19 +53,32 @@
   }
 
   &__text {
-    font-size: 5rem;
+    font-size: 6rem;
     margin-top: 4rem;
     font-weight: bold;
-    color: #663eaf;
+    color: #373737;
     text-align: center;
-    text-shadow: 0.2rem 0.2rem black;
+    text-shadow: 0.3rem 0.3rem 0.8rem rgb(164, 164, 164);
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 0.2rem;
   }
 
   &__reality {
-    color: $primary-one;
+    color: $primary-three;
+    font-size: 7.2rem;
+    text-shadow: 0.3rem 0.3rem 0.8rem rgb(33, 33, 33);
+
+    // color: blue;
   }
 
   &__dream {
-    color: $primary-three;
+    text-shadow: 0.3rem 0.3rem 0.8rem rgb(29, 29, 29);
+
+    color: #bf6cfe;
+    // font-family: "Dancing Script", cursive;
+  }
+  &__text-top {
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
   }
 }

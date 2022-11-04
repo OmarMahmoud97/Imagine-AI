@@ -5,10 +5,15 @@ import { db, auth } from "../../firebase";
 
 import VoiceToText from "../VoiceToText/VoiceToText";
 import "./translate.scss";
+import { saveAs } from "file-saver";
 function Translate() {
   // State to store the API result
   const [image, setImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  const downloadImage = () => {
+    saveAs(`${image.output_url}`, "image.jpg");
+  };
 
   // Reference to the database table in firebase
   const postsCollectionRef = collection(db, "images");
@@ -76,7 +81,6 @@ function Translate() {
   return (
     <div className="create">
       <form className="create__form" onSubmit={(e) => submitHandler(e)}>
-        <label htmlFor="prompt">Prompt</label>
         <VoiceToText
           onClick={onClickHandler}
           isSpeaking={isSpeaking}
@@ -87,15 +91,16 @@ function Translate() {
           id="prompt"
           name="prompt"
           value={result}
-          //this allows the input to take both text and voice input
           onChange={(e) => {
             setResult(e.target.value);
           }}
           className="create__input"
+          placeholder="Click on the left to speak or Type input here ..."
         />
-        <button type="submit">Submit</button>
+        <button className="nav__create" type="submit">
+          Submit
+        </button>
       </form>
-      {/* Shorthand if statement "if the image state is truthy, show the <img> tag" */}
       <div className="create__image-container-wrapper">
         <div className="create__image-container">
           {image && (
@@ -105,7 +110,9 @@ function Translate() {
               alt="AI Art"
             />
           )}
+          {isLoading && <h2 className="create__loading">Loading...</h2>}
         </div>
+        <button onClick={downloadImage}>DOWNLOAD</button>
       </div>
     </div>
   );

@@ -1,3 +1,7 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+
 .images {
   min-height: 100vh;
   &__post {
@@ -9,8 +13,25 @@
     border-radius: 1rem;
     margin-bottom: 1rem;
   }
+  &__trash {
+    width: 2rem;
+  }
   &__delete {
     margin-left: 1rem;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 1rem;
+    color: $primary-three;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition-duration: 0.3s;
+    height: 3rem;
+    cursor: pointer;
+  }
+
+  &__delete:hover {
+    background-color: #b55174;
+    color: $primary-three;
   }
   &__header {
     display: flex;

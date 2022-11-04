@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../../firebase";
+import trash from "../../assets/icons/iconmonstr-trash-can-28-240.png";
+
 import "./Gallery.scss";
 function Image(user) {
   const [imageLists, setImageList] = useState();
@@ -60,7 +62,7 @@ function Image(user) {
                           deletePost(post.id);
                         }}
                       >
-                        Delete
+                        <img className="images__trash" src={trash} alt="" />
                       </button>
                     )}
                   </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../../../firebase";
+import trash from "../../../assets/icons/iconmonstr-trash-can-28-240.png";
 import "./blogPage.scss";
 function Blog() {
   const [postLists, setPostList] = useState();
@@ -29,6 +30,7 @@ function Blog() {
       <div className="blog__header">
         <h1>Blogs</h1>
       </div>
+
       <div className="blog__container">
         {postLists.map((post) => {
           return (
@@ -42,11 +44,12 @@ function Blog() {
                 <div className="blog__deletePost">
                   {auth.currentUser && post.author.id === auth.currentUser.uid && (
                     <button
+                      className="blog__delete"
                       onClick={() => {
                         deletePost(post.id);
                       }}
                     >
-                      Delete
+                      <img className="images__trash" src={trash} alt="" />
                     </button>
                   )}
                 </div>

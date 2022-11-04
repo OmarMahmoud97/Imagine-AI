@@ -8,16 +8,19 @@ export default function VoiceTotext(props) {
           <div className="voiceToText__header-container"></div>
           <div className="voiceToText__textbox">
             <div className="voiceToText__container">
-              <p className="voiceToText__text">
+              {/* <p className="voiceToText__text">
                 {props.isSpeaking ? "Speak Now..." : ""}
-              </p>
-              <p className="voiceToText__voice">
+              </p> */}
+              {/* <p className="voiceToText__voice">
                 {props.result && props.result}
-              </p>
+              </p> */}
             </div>
           </div>
           <div className="voiceToText__button">
-            <button onClick={props.onClick} className="voiceToText__speak">
+            <button
+              onClick={props.onClick}
+              className="voiceToText__speak nav__create"
+            >
               Click & Speak!
             </button>
           </div>

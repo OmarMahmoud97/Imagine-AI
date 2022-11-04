@@ -26,28 +26,28 @@ function CreatePost({ isAuth }) {
   // }, []);
 
   return (
-    <div className="blog-page">
-      <div className="blog__container">
-        <h1>Create A Post</h1>
-        <div className="blog__input">
-          <label> Title:</label>
-          <input
-            placeholder="Title..."
-            onChange={(event) => {
-              setTitle(event.target.value);
-            }}
-          />
-        </div>
-        <div className="blog__input">
-          <label> Post:</label>
-          <textarea
-            placeholder="Post..."
-            onChange={(event) => {
-              setPostText(event.target.value);
-            }}
-          />
-        </div>
-        <button onClick={createPost}> Submit Post</button>
+    <div className="blog__page">
+      <div className="blog__container-create">
+        <h1 className="blog__create-header">Create A Post</h1>
+        <input
+          className="blog__input-title"
+          placeholder="Title..."
+          onChange={(event) => {
+            setTitle(event.target.value);
+          }}
+        />
+
+        <textarea
+          className="blog__input-item"
+          placeholder="Post..."
+          onChange={(event) => {
+            setPostText(event.target.value);
+          }}
+        />
+        <button className="nav__login" onClick={createPost}>
+          {" "}
+          Submit Post
+        </button>
       </div>
     </div>
   );

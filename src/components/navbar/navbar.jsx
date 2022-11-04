@@ -30,12 +30,16 @@ const NavPage = () => {
             {user?.displayName ? <li className="nav__item">Gallery</li> : ""}
           </Link>
 
-          <Link to="/create">
-            {user?.displayName ? <li className="nav__item">Create</li> : ""}
-          </Link>
-
           <Link to="/blog">
             <li className="nav__item">Blog</li>
+          </Link>
+
+          <Link to="/create-post">
+            {user?.displayName ? (
+              <li className="nav__item">Create Blog</li>
+            ) : (
+              ""
+            )}
           </Link>
           <Link className="nav__account-btn" to="/SignIn">
             {user?.displayName ? (
@@ -46,9 +50,9 @@ const NavPage = () => {
               <button className="nav__login">Login</button>
             )}
           </Link>
-          <Link className="nav__account-btn" to="/create-post">
+          <Link className="nav__account-btn" to="/create">
             {user?.displayName ? (
-              <button className="nav__create">Create post</button>
+              <button className="nav__create">Create Image</button>
             ) : (
               ""
             )}

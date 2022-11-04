@@ -5,7 +5,26 @@
   justify-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
-
+  &__delete {
+    background-color: transparent;
+    transition-duration: 0.3s;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__page {
+    min-height: 100vh;
+  }
+  &__delete:hover {
+    background-color: #b55174;
+  }
+  &__create-header {
+    color: white;
+  }
   &__post {
     width: 350px;
     height: 350px;
@@ -38,5 +57,19 @@
   &__header {
     color: white;
     margin-bottom: 2rem;
+  }
+  &__container-create {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 80vh;
+  }
+  &__input-item {
+    height: 20%;
+    width: 30%;
+  }
+  &__input-title {
+    width: 30%;
   }
 }

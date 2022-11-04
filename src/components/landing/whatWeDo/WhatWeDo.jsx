@@ -21,7 +21,7 @@ const WhatweDo = () => (
             </div>
           </div>
         </div>
-      </div>{" "}
+      </div>
       <div className="WhatWeDo__two animate__animated animate__bounceInUp">
         <div className="WhatWeDo__innerWrapper">
           <img className="WhatWeDo__img" src={create}></img>

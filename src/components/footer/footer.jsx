@@ -16,6 +16,9 @@ const Footer = () => {
           >
             <img className="footer__icon" src={github}></img>{" "}
           </a>
+          <a href="mailto:OmarMahmoud997@hotmail.com">
+            <img className="footer__icon" src={mail}></img>
+          </a>
           <a
             target="_blank"
             rel="noreferrer"
@@ -23,7 +26,6 @@ const Footer = () => {
           >
             <img className="footer__icon" src={linkedin}></img>
           </a>
-          <img className="footer__icon" src={mail}></img>
         </div>
         <p className="footer__text-bottom">Utilising the power of Deep AI</p>
       </div>
