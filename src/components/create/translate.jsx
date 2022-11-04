@@ -8,6 +8,7 @@ import "./translate.scss";
 function Translate() {
   // State to store the API result
   const [image, setImage] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Reference to the database table in firebase
   const postsCollectionRef = collection(db, "images");
@@ -26,6 +27,7 @@ function Translate() {
   // The asyncronous function, which takes in the prompt as a param
   // And uses that prompt to hit the API
   const getImage = async (prompt) => {
+    setIsLoading(true);
     // Hit our backend, with a POST request and sending the prompt
     const { data } = await axios.post(
       `${process.env.REACT_APP_BACKEND_URL}/image`,
@@ -50,6 +52,7 @@ function Translate() {
     };
 
     saveImg();
+    setIsLoading(false);
   };
 
   let SpeechRecognition =

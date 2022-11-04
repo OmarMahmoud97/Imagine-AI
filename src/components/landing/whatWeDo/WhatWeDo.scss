@@ -42,7 +42,7 @@
     }
     @include desktop {
       margin-bottom: 0;
-      width: 30%;
+      width: 32%;
     }
   }
 
@@ -55,6 +55,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    z-index: 100;
   }
   &__wrapper {
     flex-wrap: wrap;
@@ -62,6 +63,14 @@
   }
   &__text {
     text-align: center;
+    font-size: 1.35rem;
+    color: rgba(44, 44, 44, 0.8);
+    @include tablet {
+      font-size: 2.1rem;
+    }
+    @include desktop {
+      font-size: 1.7rem;
+    }
   }
   &__header {
     margin-bottom: 1rem;
@@ -72,10 +81,12 @@
     font-size: 4rem;
     color: $primary-three;
     text-shadow: 0.3rem 0.3rem $primary-one;
+    text-align: center;
   }
   &__img {
     border-color: transparent;
-    height: 12rem;
+    height: 9rem;
+    z-index: -10;
     @include tablet {
       height: 15rem;
     }

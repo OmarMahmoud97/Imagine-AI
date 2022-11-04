@@ -6,7 +6,7 @@ import "./styles/partials/_resets.scss";
 
 import CreateBlog from "./components/blog/createBlog/createBlog";
 import SignInPage from "./components/signInPage/signInPage";
-import Translate from "./components/translation/translate";
+import Translate from "./components/create/translate";
 import Blog from "./components/blog/blogPage/blogPage";
 import Landing from "./components/landing/landing";
 import NavPage from "./components/navbar/navbar";

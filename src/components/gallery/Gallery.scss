@@ -1,5 +1,4 @@
 .images {
-  background-color: white;
   min-height: 100vh;
   &__post {
     width: 350px;
@@ -23,9 +22,11 @@
     font-size: 3rem;
     text-align: center;
     margin: 2rem 0;
+    color: white;
   }
   &__name {
     font-size: 1.2rem;
+    color: white;
   }
   &__container {
     display: flex;

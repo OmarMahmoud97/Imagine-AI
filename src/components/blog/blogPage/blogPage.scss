@@ -1,5 +1,5 @@
 .blog {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -15,6 +15,7 @@
     border: 5px solid white;
     border-radius: 1rem;
     // background-color: white;
+    margin-bottom: 2rem;
   }
   &__title {
     font-size: 1rem;
@@ -28,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__text {
