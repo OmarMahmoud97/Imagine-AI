@@ -12,6 +12,7 @@
     object-fit: cover;
     border-radius: 0 0 20rem 20rem;
   }
+
   &__overlay {
     position: absolute;
     top: 0;
@@ -28,6 +29,7 @@
       margin-top: 13vh;
     }
   }
+
   &__content {
     position: absolute;
     width: 100%;
@@ -43,6 +45,7 @@
       height: 85vh;
     }
   }
+
   &__text {
     font-size: 5rem;
     margin-top: 4rem;
@@ -51,9 +54,11 @@
     text-align: center;
     text-shadow: 0.2rem 0.2rem black;
   }
+
   &__reality {
     color: $primary-one;
   }
+
   &__dream {
     color: $primary-three;
   }
