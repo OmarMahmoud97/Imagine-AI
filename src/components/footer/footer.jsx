@@ -14,7 +14,7 @@ const Footer = () => {
             rel="noreferrer"
             href="https://github.com/OmarMahmoud97"
           >
-            <img className="footer__icon" src={github}></img>{" "}
+            <img className="footer__icon" src={github}></img>
           </a>
           <a href="mailto:OmarMahmoud997@hotmail.com">
             <img className="footer__icon" src={mail}></img>

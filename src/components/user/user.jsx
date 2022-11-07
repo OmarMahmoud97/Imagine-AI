@@ -15,7 +15,7 @@ const User = () => {
   return (
     <section className="user">
       <Link to="/nav">
-        <img className="landing__hamburger" src={hamburger} alt="" />{" "}
+        <img className="landing__hamburger" src={hamburger} alt="" />
       </Link>
       <div className="user__container">
         <h1 className="user__header">welcome! {user?.displayName}</h1>
@@ -27,7 +27,7 @@ const User = () => {
           ) : (
             <button className="nav__login">Login</button>
           )}
-        </Link>{" "}
+        </Link>
       </div>
     </section>
   );

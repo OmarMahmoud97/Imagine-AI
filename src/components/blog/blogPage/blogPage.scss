@@ -37,14 +37,15 @@
     margin: 0 1rem;
     border: 5px solid white;
     border-radius: 1rem;
-    // background-color: white;
+    background-color: #49b68f80;
     margin-bottom: 2rem;
+    border-color: transparent;
     @include tablet {
       width: 350px;
       height: 350px;
     }
   }
-  &__title {
+  &__post &__title {
     font-size: 1rem;
     color: white;
   }
@@ -61,10 +62,12 @@
 
   &__text {
     color: white;
+    scrollbar-color: red;
   }
   &__header {
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
   }
   &__container-create {
     display: flex;
@@ -79,5 +82,16 @@
   }
   &__input-title {
     width: 30%;
+  }
+  &__title-text {
+    color: $primary-four;
+  }
+  &__file {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+    color: white;
   }
 }

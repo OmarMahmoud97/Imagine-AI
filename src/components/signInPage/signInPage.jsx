@@ -44,7 +44,7 @@ const SignInPage = ({ setIsAuth }) => {
     if (user != null) {
       navigate("/");
     }
-  }, []);
+  }, [user]);
 
   return (
     <section className="signInPage">

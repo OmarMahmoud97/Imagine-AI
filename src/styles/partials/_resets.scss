@@ -49,3 +49,11 @@ a {
   justify-content: center;
   flex-direction: column;
 }
+
+::-webkit-scrollbar-thumb {
+  background: red;
+}
+
+::-webkit-scrollbar-track {
+  background: red;
+}

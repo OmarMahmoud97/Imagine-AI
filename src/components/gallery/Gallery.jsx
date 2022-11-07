@@ -31,7 +31,7 @@ function Image(user) {
     <div className="images">
       <div className="landing__nav-btn">
         <Link to="/nav">
-          <img className="landing__hamburger" src={hamburger} alt="" />{" "}
+          <img className="landing__hamburger" src={hamburger} alt="" />
         </Link>
       </div>
       <div className="images__header">

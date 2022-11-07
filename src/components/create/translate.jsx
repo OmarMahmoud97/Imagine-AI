@@ -83,7 +83,7 @@ function Translate() {
     <div className="create">
       <div className="landing__nav-btn">
         <Link to="/nav">
-          <img className="landing__hamburger" src={hamburger} alt="" />{" "}
+          <img className="landing__hamburger" src={hamburger} alt="" />
         </Link>
       </div>
       <form className="create__form" onSubmit={(e) => submitHandler(e)}>

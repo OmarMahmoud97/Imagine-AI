@@ -31,7 +31,7 @@ function Blog() {
     <div className="blog">
       <div className="landing__nav-btn">
         <Link to="/nav">
-          <img className="landing__hamburger" src={hamburger} alt="" />{" "}
+          <img className="landing__hamburger" src={hamburger} alt="" />
         </Link>
       </div>
       <div className="blog__header">
@@ -44,10 +44,15 @@ function Blog() {
             <div key={post.id} className="blog__post">
               <div className="blog__header">
                 <div className="blog__title">
-                  <h1> {post.title}</h1>
+                  <h1 className="blog__title-text"> {post.title}</h1>
                 </div>
                 <h3 className="blog__name">Created By:{post.author.name}</h3>
 
+                <img
+                  className="blog__image"
+                  src={post.image}
+                  alt="uploaded image"
+                ></img>
                 <div className="blog__deletePost">
                   {auth.currentUser && post.author.id === auth.currentUser.uid && (
                     <button
