@@ -8,7 +8,7 @@ import "./blogPage.scss";
 function Blog() {
   const [postLists, setPostList] = useState();
   const postsCollectionRef = collection(db, "blogPosts");
-
+  const [image, setImage] = useState();
   const getPosts = async () => {
     const data = await getDocs(postsCollectionRef);
     setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
@@ -48,11 +48,16 @@ function Blog() {
                 </div>
                 <h3 className="blog__name">Created By:{post.author.name}</h3>
 
-                <img
-                  className="blog__image"
-                  src={post.image}
-                  alt="uploaded image"
-                ></img>
+                {post?.image ? (
+                  <img
+                    className="blog__image"
+                    src={post.image}
+                    alt="No Image"
+                  ></img>
+                ) : (
+                  ""
+                )}
+
                 <div className="blog__deletePost">
                   {auth.currentUser && post.author.id === auth.currentUser.uid && (
                     <button

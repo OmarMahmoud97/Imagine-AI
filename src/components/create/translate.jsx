@@ -101,7 +101,7 @@ function Translate() {
             setResult(e.target.value);
           }}
           className="create__input"
-          placeholder="Click on the left to speak or Type input here ..."
+          placeholder="Click to speak or Type input here ..."
         />
         <button className="nav__create" type="submit">
           Submit
@@ -118,7 +118,9 @@ function Translate() {
           )}
           {isLoading && <h2 className="create__loading">Loading...</h2>}
         </div>
-        <button onClick={downloadImage}>DOWNLOAD</button>
+        <button className="create__download" onClick={downloadImage}>
+          DOWNLOAD
+        </button>
       </div>
     </div>
   );

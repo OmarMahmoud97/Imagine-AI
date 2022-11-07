@@ -40,6 +40,7 @@
     background-color: #49b68f80;
     margin-bottom: 2rem;
     border-color: transparent;
+
     @include tablet {
       width: 350px;
       height: 350px;
@@ -67,7 +68,11 @@
   &__header {
     color: white;
     margin-bottom: 5rem;
-    margin-top: 5rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   &__container-create {
     display: flex;
@@ -77,11 +82,18 @@
     height: 80vh;
   }
   &__input-item {
-    height: 20%;
-    width: 30%;
+    width: 60%;
+    height: 25%;
+    @include tablet {
+      height: 20%;
+      width: 30%;
+    }
   }
   &__input-title {
-    width: 30%;
+    width: 60%;
+    @include tablet {
+      width: 30%;
+    }
   }
   &__title-text {
     color: $primary-four;
@@ -93,5 +105,8 @@
     justify-content: center;
     width: 18rem;
     color: white;
+  }
+  &__image {
+    width: 90%;
   }
 }

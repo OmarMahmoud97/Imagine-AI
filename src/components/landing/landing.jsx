@@ -14,7 +14,7 @@ const Landing = () => (
       <div className="landing__content">
         <div className="landing__nav-btn">
           <Link to="/nav">
-            <img className="landing__hamburger" src={hamburger} alt="" />{" "}
+            <img className="landing__hamburger" src={hamburger} alt="" />
           </Link>
         </div>
 

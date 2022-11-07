@@ -51,6 +51,7 @@ function CreatePost({ isAuth }) {
         <input
           className="blog__input-title"
           placeholder="Title..."
+          required
           onChange={(event) => {
             setTitle(event.target.value);
           }}
@@ -59,6 +60,7 @@ function CreatePost({ isAuth }) {
         <textarea
           className="blog__input-item"
           placeholder="Post..."
+          required
           onChange={(event) => {
             setPostText(event.target.value);
           }}

@@ -16,7 +16,6 @@
   &__input {
     border-radius: 1rem;
     height: 3rem;
-    background-color: $primary-one;
     border-color: transparent;
     color: $primary-three;
     font-weight: bold;
@@ -60,5 +59,8 @@
   }
   &__loading {
     color: white;
+  }
+  &__download {
+    cursor: pointer;
   }
 }
