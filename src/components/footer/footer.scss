@@ -1,0 +1,63 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 12rem 12rem 0 0;
+  bottom: 0;
+  margin-top: 8rem;
+  @include tablet {
+    background-color: rgb(102, 62, 175, 0.2);
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 8rem;
+  }
+
+  &__container {
+    height: 100%;
+    background-image: url("../../assets/images/footerbackground.jpg");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: column;
+    @include tablet {
+      width: 80%;
+    }
+  }
+  &__icon {
+    color: white;
+    height: 5rem;
+    margin: 0 1rem;
+  }
+  &__text {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    text-shadow: 0.2rem 0.2rem $primary-three;
+    text-align: center;
+  }
+  &__icon-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text-bottom {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    text-shadow: 0.2rem 0.2rem black;
+    text-align: center;
+  }
+}

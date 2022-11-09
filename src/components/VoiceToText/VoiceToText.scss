@@ -1,0 +1,20 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+
+.voiceToText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  &__text {
+    color: white;
+  }
+  &__mic {
+    height: 100%;
+  }
+  &__speak {
+    padding: 0.3rem;
+  }
+}

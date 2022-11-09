@@ -1,0 +1,58 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+
+.images {
+  min-height: 100vh;
+  &__post {
+    width: 350px;
+    height: 350px;
+    border: 1px solid #ccc;
+    margin: 0 1rem;
+    border: 5px solid black;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__trash {
+    width: 2rem;
+  }
+  &__delete {
+    margin-left: 1rem;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 1rem;
+    color: $primary-three;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition-duration: 0.3s;
+    height: 3rem;
+    cursor: pointer;
+  }
+
+  &__delete:hover {
+    background-color: #b55174;
+    color: $primary-three;
+  }
+  &__header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: white;
+  }
+  &__name {
+    font-size: 1.2rem;
+    color: white;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

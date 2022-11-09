@@ -1,0 +1,101 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap");
+.landing {
+  height: 85vh;
+  width: 100vw;
+
+  &__video {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    border-radius: 0 0 20rem 20rem;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 85vh;
+    background: radial-gradient(
+      circle,
+      rgba(217, 217, 217, 0.21) 29%,
+      rgba(217, 217, 217, 0.22) 30%
+    );
+    border-radius: 0 0 20rem 20rem;
+    @include tablet {
+      margin-top: 13vh;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    @include tablet {
+      margin-top: 8vh;
+      height: 25%;
+    }
+    @include desktop {
+      height: 85vh;
+    }
+  }
+
+  &__text {
+    font-size: 6rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #373737;
+    text-align: center;
+    text-shadow: 0.3rem 0.3rem 0.8rem rgb(164, 164, 164);
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 0.2rem;
+    @include tablet {
+      margin-top: 4rem;
+    }
+  }
+
+  &__reality {
+    color: $primary-three;
+    font-size: 7.2rem;
+    text-shadow: 0.3rem 0.3rem 0.8rem rgb(33, 33, 33);
+
+    // color: blue;
+  }
+
+  &__dream {
+    text-shadow: 0.3rem 0.3rem 0.8rem rgb(29, 29, 29);
+
+    color: #bf6cfe;
+    // font-family: "Dancing Script", cursive;
+  }
+  &__text-top {
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
+  }
+  &__nav-btn {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__hamburger {
+    width: 6rem;
+    height: 8rem;
+    margin-right: 1rem;
+  }
+}

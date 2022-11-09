@@ -1,0 +1,17 @@
+.user {
+  height: 100vh;
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__header {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: white;
+    text-align: center;
+  }
+}

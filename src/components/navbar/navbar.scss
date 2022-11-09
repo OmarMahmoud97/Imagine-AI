@@ -1,0 +1,168 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+
+.nav {
+  @include flex-center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100vw;
+  height: 13vh;
+  background-color: black;
+  display: none;
+  @include tablet {
+    display: flex;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablet {
+      justify-content: space-between;
+      width: 80%;
+    }
+  }
+  &__links {
+    width: 320px;
+    display: flex;
+    justify-content: flex-end;
+    @include tablet {
+      width: 5 00px;
+    }
+    @include desktop {
+      width: 700px;
+    }
+  }
+  &__item {
+    margin: 0 2rem;
+    color: $primary-three;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__logo {
+    display: none;
+    height: 13vh;
+    cursor: pointer;
+    @include desktop {
+      display: block;
+      color: rgb(84, 182, 162);
+    }
+  }
+  &__item:hover {
+    color: $primary-one;
+  }
+  &__dropdown:hover {
+    color: white;
+  }
+  &__dropdown {
+    z-index: 100;
+    width: 10rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__dropdown:last-child {
+    border-radius: 0 0 1rem 1rem;
+  }
+  &__dropdown-first {
+    border-radius: 1rem 1rem 0 0;
+  }
+  &__login {
+    background-color: $primary-three;
+    border-color: transparent;
+    width: 10rem;
+    border-radius: 1rem;
+    color: $primary-one;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition-duration: 0.3s;
+    height: 4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__login:hover {
+    background-color: $primary-one;
+    color: $primary-three;
+  }
+  &__account-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__create {
+    background-color: $primary-one;
+    border-color: transparent;
+    width: 10rem;
+    border-radius: 1rem;
+    color: $primary-three;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition-duration: 0.3s;
+    height: 4rem;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+
+  &__create:hover {
+    background-color: $primary-three;
+    color: $primary-one;
+  }
+  &__dropdown-container {
+    margin-top: 16vh;
+  }
+}
+
+li {
+  color: $primary-four;
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+li .nav__dropdown {
+  color: $primary-four;
+}
+
+li:hover {
+  color: white;
+  // background: $primary-four;
+  cursor: pointer;
+}
+
+ul li ul {
+  visibility: hidden;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  color: white;
+  visibility: visible;
+  display: block;
+}
+
+// ul li ul li {
+//   clear: both;
+//   width: 100%;
+// }

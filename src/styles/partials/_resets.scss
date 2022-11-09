@@ -1,6 +1,5 @@
 @use "../../styles/partials/variables" as *;
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Capriola&display=swap");
 html {
   font-size: 62.5%;
 }
@@ -10,10 +9,14 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 1.6rem;
-  font-family: Titillium Web;
+  font-family: "Capriola", sans-serif;
   min-height: 100vh;
   position: relative;
-  background-color: #ffff;
+  background-color: #0b0213;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 *,
@@ -39,4 +42,18 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+}
+
+::-webkit-scrollbar-track {
+  background: red;
 }
